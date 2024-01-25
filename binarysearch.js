@@ -2,9 +2,9 @@
 const data = [2,4,6,8,10,11,12,20,30,1000];
 //create a function tha
 function binarySearch(data, num){
-   let lenght = data.lenght;
+   let length = data.length;
    let left = 0;
-   let right = lenght - 1;
+   let right = length - 1;
    let index;
    let attempt = 0;
 
@@ -19,12 +19,12 @@ function binarySearch(data, num){
         }
         //update the left and right counter or indexes
         if(num < data[middle]){
-                right=middle-1;
+            right=middle-1;
         }else{
             left=middle+1;
         }
-       return `${num} is not found with ${attempt} attempts!`
     }
+    return `${num} is not found with ${attempt} attempts!`;
 }
 console.log(binarySearch(data,4));
 console.log(binarySearch(data,11));
